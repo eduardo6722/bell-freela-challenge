@@ -1,0 +1,9 @@
+{
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": true
+	},
+
+	// ESLint
+	"eslint.validate": ["javascript", "javascriptreact"],
+}

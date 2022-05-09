@@ -1,3 +1,14 @@
 {
-  "extends": "next/core-web-vitals"
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "prefer-const": "warn",
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-console": "warn",
+    "react/no-children-prop": "off"
+  }
 }
