@@ -23,10 +23,6 @@ export async function listUsersService() {
   return app.get<{ result: User[] }>('/user/list')
 }
 
-export async function viewUserService(user_id: number) {
-  return app.get<{ result: User }>(`/user/view/${user_id}`)
-}
-
 export async function savePhotoService(data: UserPhotoDto) {
   const form = new FormData()
   const { user_id, file } = data
@@ -41,8 +37,4 @@ export async function updatePhotoService(data: UserPhotoDto) {
   form.append('user_id', String(user_id))
   form.append('file', file)
   return app.post<{ photo: string }>('/photo/update', form)
-}
-
-export async function viewPhotoService(user_id: number) {
-  return app.get<{ result: User }>(`/photo/view/${user_id}`)
 }

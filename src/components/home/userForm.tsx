@@ -178,9 +178,9 @@ function UserForm({ user, onSuccess }: UserFormProps) {
         width="100%"
         leftIcon={
           user ? (
-            <FaCheck size={22} color="white" />
+            <FaCheck size={18} color="white" />
           ) : (
-            <FaPlus size={22} color="white" />
+            <FaPlus size={18} color="white" />
           )
         }
       >

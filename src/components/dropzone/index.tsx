@@ -6,7 +6,12 @@ interface DropzoneProps {
 }
 
 function Dropzone({ onDrop }: DropzoneProps) {
-  const { getRootProps, getInputProps } = useDropzone({ onDrop })
+  const { getRootProps, getInputProps } = useDropzone({
+    onDrop,
+    accept: {
+      'image/jpeg': ['.jpeg', '.png'],
+    },
+  })
 
   return (
     <Box
@@ -18,6 +23,8 @@ function Dropzone({ onDrop }: DropzoneProps) {
       justifyContent="center"
       alignItems="center"
       cursor="pointer"
+      padding="12px"
+      textAlign="center"
       {...getRootProps()}
     >
       <input {...getInputProps()} />
